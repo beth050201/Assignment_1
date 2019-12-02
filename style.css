@@ -1,0 +1,123 @@
+/* starter code used from Nile */
+
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+     color:rgb(240, 245, 248);
+     text-align: left;
+     font-size: 40px;
+ }
+ 
+ 
+ h2{
+   font-family: 'Montserrat', sans-serif;
+   color: white;
+ }
+
+ h3{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+ }
+
+ p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 20px;
+ }
+
+ nav {
+    margin: 50px;
+    font-family: 'Raleway', sans-serif;
+    float: right;
+    
+  }
+  
+  ul {
+    overflow: auto;
+    list-style-type: none;
+  }
+ 
+  li {
+    height: 25px;
+    float: left;
+    margin-right: 0px;
+    border-right: 1px solid #aaa;
+    padding: 0 20px;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+ 
+  li a {
+    text-decoration: none;
+    color: white;
+    /*change of font size*/
+    font: 20px/1 'Raleway', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+  }
+   
+  li a:hover {
+    color: rgba(37, 91, 161, 0.5);
+  }
+
+  li.active a {
+    font-weight: bold;
+    color: #333;
+  }
+
+  body{
+    background: linear-gradient(rgb(172, 189, 214), rgb(203, 206, 206));
+}
+
+.content {
+    display: grid;
+    grid-template-columns: (4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .one {
+    grid-column: 3/ 4;
+    grid-row: 1;
+    text-align: right;
+    padding: 0%;
+    /*background-color: white;*/
+  }
+
+  .two { 
+    grid-column: 1 / 2;
+    grid-row: 1 ;
+    padding: 10%;
+    /*background-color: skyblue;*/
+  }
+
+  img {
+    border-style: none;
+    border-radius: 15%;
+    align-items: center;
+   }
+  .three {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 5em;
+    /*background-color: skyblue;*/
+    text-align: center;
+    padding: 10px 50px 20px;
+  }
+
+  .four {
+      grid-column: 3 / 4;
+      grid-row: 2 ;
+      padding: 10%;
+      background-color:skyblue;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      padding: padding: 10px 50px 20px;;
+  }
+
+footer{
+    text-align: left;
+    color:white
+}
