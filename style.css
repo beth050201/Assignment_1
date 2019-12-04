@@ -29,7 +29,8 @@ h1 {
     margin: 50px;
     font-family: 'Raleway', sans-serif;
     float: right;
-    
+    flex-direction: row-reverse;
+    display: flex;
   }
   
   ul {
@@ -69,6 +70,9 @@ h1 {
 
   body{
     background: linear-gradient(rgb(172, 189, 214), rgb(203, 206, 206));
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
+    display: flex;
+    flex-direction: column;
 }
 
 .content {
@@ -76,6 +80,7 @@ h1 {
     grid-template-columns: (4, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    
   }
 
   .one {
@@ -89,6 +94,7 @@ h1 {
     grid-column: 1 / 2;
     grid-row: 1 ;
     padding: 10%;
+    text-align: left;
   }
 
   img {
@@ -96,11 +102,12 @@ h1 {
     border-radius: 15%;
     align-items: center;
    }
+
   .three {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 2 / 3;
     padding: 5em;
-    /*background-color: skyblue;*/
+    /*background-color: rgb(198, 229, 241);*/
     text-align: center;
     padding: 10px 50px 20px;
   }
@@ -109,11 +116,55 @@ h1 {
       grid-column: 3 / 4;
       grid-row: 2 ;
       padding: 10%;
-      background-color:skyblue;
+     /* background-color: rgb(198, 229, 241);*/
       font-family: 'Raleway', sans-serif;
       text-align: center;
-      padding: padding: 10px 50px 20px;;
+      padding: padding: 10px 50px 20px;
   }
+
+.five{
+  grid-column: 3/4;
+  grid-row: 3;
+  padding: 10%;
+  /*background-color: rgb(198, 229, 241);*/
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding: 10px 50px 20px;
+  
+}
+
+.topleft{
+grid-column: 1;
+grid-row: 2;
+
+}
+
+.topmiddle{
+grid-column: 2;
+grid-row: 2;
+}
+
+.topright{
+grid-column: 3;
+grid-row: 2;
+}
+
+.bottomleft{
+grid-column: 1;
+grid-row: 3;
+}
+
+
+.bottommiddle{
+grid-column: 2;
+grid-row: 3;
+}
+
+.bottomright{
+grid-column: 3;
+grid-row: 3;
+}
+
 
 footer{
     text-align: left;
