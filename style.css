@@ -1,11 +1,19 @@
 /* starter code used from Nile */
 
+*{
+  padding: 0;
+  margin: 0;
+}
+
 
 h1 {
     font-family: 'Raleway', sans-serif;
      color:rgb(240, 245, 248);
      text-align: left;
      font-size: 40px;
+     padding-top: 25px;
+     padding-left: 25px;
+     padding-bottom: 25px;
  }
  
  
@@ -25,12 +33,14 @@ h1 {
     font-size: 20px;
  }
 
- nav {
-    margin: 50px;
+ nav { 
     font-family: 'Raleway', sans-serif;
     float: right;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: space-between;
     display: flex;
+    padding-top: 25px;
+    padding-right: 25px;
   }
   
   ul {
@@ -73,29 +83,17 @@ h1 {
     /*https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-.content {
+.content1 {
     display: grid;
-    grid-template-columns: (4, 1fr);
+    grid-template-columns: (2, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     
   }
 
-  .one {
-    grid-column: 3/ 4;
-    grid-row: 1;
-    text-align: right;
-    padding: 0%;
-  }
-
-  .two { 
-    grid-column: 1 / 2;
-    grid-row: 1 ;
-    padding: 10%;
-    text-align: left;
-  }
 
   img {
     border-style: none;
@@ -103,18 +101,18 @@ h1 {
     align-items: center;
    }
 
-  .three {
+  .one {
     grid-column: 1;
-    grid-row: 2 / 3;
+    grid-row: 1;
     padding: 5em;
     /*background-color: rgb(198, 229, 241);*/
     text-align: center;
     padding: 10px 50px 20px;
   }
 
-  .four {
-      grid-column: 3 / 4;
-      grid-row: 2 ;
+  .two {
+      grid-column: 2;
+      grid-row: 1 ;
       padding: 10%;
      /* background-color: rgb(198, 229, 241);*/
       font-family: 'Raleway', sans-serif;
@@ -122,9 +120,9 @@ h1 {
       padding: padding: 10px 50px 20px;
   }
 
-.five{
-  grid-column: 3/4;
-  grid-row: 3;
+.three{
+  grid-column: 2;
+  grid-row: 2;
   padding: 10%;
   /*background-color: rgb(198, 229, 241);*/
   font-family: 'Raleway', sans-serif;
@@ -133,40 +131,31 @@ h1 {
   
 }
 
-.topleft{
-grid-column: 1;
-grid-row: 2;
-
+.content2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(150px, auto);
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
 }
 
-.topmiddle{
-grid-column: 2;
-grid-row: 2;
+.portfolio{
+  border-style: none;
+  border-radius: 15%;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
-.topright{
-grid-column: 3;
-grid-row: 2;
+.portfolio img{
+  width: 100%;
+  box-shadow: 0 5px 20px rgb(95, 96, 100);
 }
-
-.bottomleft{
-grid-column: 1;
-grid-row: 3;
-}
-
-
-.bottommiddle{
-grid-column: 2;
-grid-row: 3;
-}
-
-.bottomright{
-grid-column: 3;
-grid-row: 3;
-}
-
 
 footer{
     text-align: left;
-    color:white
+    color:white;
+    padding-left: 25px;
 }
