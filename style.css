@@ -3,6 +3,7 @@
 *{
   padding: 0;
   margin: 0;
+  
 }
 
 
@@ -19,21 +20,21 @@ h1 {
  
  h2{
    font-family: 'Montserrat', sans-serif;
-   color: white;
+   color: black;
  }
 
  h3{
     font-family: 'Raleway', sans-serif;
-    color: white;
+    color: black;
  }
 
  p{
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: black;
     font-size: 20px;
  }
 
- nav { 
+nav { 
     font-family: 'Raleway', sans-serif;
     float: right;
     flex-direction: row;
@@ -41,6 +42,8 @@ h1 {
     display: flex;
     padding-top: 25px;
     padding-right: 25px;
+    background: linear-gradient(rgb(172, 189, 214), rgb(162, 201, 233));
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
   }
   
   ul {
@@ -62,7 +65,7 @@ h1 {
  
   li a {
     text-decoration: none;
-    color: white;
+    color: rgb(243, 236, 236);
     /*change of font size*/
     font: 20px/1 'Raleway', sans-serif;
     text-transform: uppercase;
@@ -79,8 +82,6 @@ h1 {
   }
 
   body{
-    background: linear-gradient(rgb(172, 189, 214), rgb(203, 206, 206));
-    /*https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -88,12 +89,14 @@ h1 {
 
 .content1 {
     display: grid;
-    grid-template-columns: (2, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
     grid-auto-rows: minmax(100px, auto);
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 100px;
     
   }
-
 
   img {
     border-style: none;
@@ -111,51 +114,129 @@ h1 {
   }
 
   .two {
-      grid-column: 2;
-      grid-row: 1 ;
+      grid-column: 3;
+      grid-row: 1;
       padding: 10%;
      /* background-color: rgb(198, 229, 241);*/
       font-family: 'Raleway', sans-serif;
       text-align: center;
-      padding: padding: 10px 50px 20px;
+      padding: 10px 50px 20px;
   }
 
-.three{
-  grid-column: 2;
-  grid-row: 2;
-  padding: 10%;
-  /*background-color: rgb(198, 229, 241);*/
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  padding: 10px 50px 20px;
+  .three{
+    grid-column: 3;
+    grid-row: 2;
+    padding: 10%;
+    /*background-color: rgb(198, 229, 241);*/
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 10px 50px 20px;
   
 }
 
-.content2{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-    grid-auto-rows: minmax(150px, auto);
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 50px;
+.container {
+  width: 96rem;
+  margin: 2rem auto;
 }
 
-.portfolio{
-  border-style: none;
-  border-radius: 15%;
-  align-items: center;
+.portfolio-item  {
+  max-width: 100%;
+  border-radius: 17px;
+  /*box-shadow: 0 5px 20px rgba(117, 184, 223, 0.5);*/
+  transition: all .3s;
+  overflow: hidden;
   position: relative;
-  width: 100%;
 }
 
-.portfolio img{
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  grid-auto-rows: minmax(150px, auto);
+}
+
+.image {
+  opacity: 1;
+  display: block;
   width: 100%;
-  box-shadow: 0 5px 20px rgb(95, 96, 100);
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  object-fit: cover;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.portfolio-item:hover .image {
+  filter: grayscale(1);
+}
+
+.portfolio-item:hover .middle {
+  opacity: 1;
+}
+
+.portfolio-item:hover {
+  /*box-shadow: 0 10px 20px rgba(0,0,0,0.8);*/
+}
+
+.text {
+  color: white;
+  font-size: 2.5em;
+  padding: 16px 32px;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 500px) {
+  .portfolio-item,
+  body{
+      max-width: 30%;
+      grid-column: 2;
+      font-family: 'Raleway', sans-serif;
+      text-align: left;
+  }
+  div.container, h1{
+      text-align: left;
+      margin-left: 2em;
+  }
+  div.text{
+      font-size: 2.5em;
+  }
 }
 
 footer{
     text-align: left;
-    color:white;
+    color: white;
+    background: linear-gradient(rgb(172, 189, 214), rgb(162, 201, 233));
     padding-left: 25px;
 }
+
+
+/*@media (min-width: 900px) {
+  .content2{
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+
+}
+
+/*@media (min-width: 400px) {
+  .content1{
+      
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+      font-family: 'Raleway', sans-serif;
+     text-align: left;
+  }
+
+  /*.two {
+    grid-column: 1;
+    grid-row: 2; */
+
+  
+
