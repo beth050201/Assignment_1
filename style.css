@@ -9,29 +9,42 @@
 
 h1 {
     font-family: 'Raleway', sans-serif;
-     color:rgb(240, 245, 248);
+     color:white;
      text-align: left;
      font-size: 40px;
-     padding-top: 25px;
-     padding-left: 25px;
-     padding-bottom: 25px;
+     padding-top: 20px;
+     padding-left: 100px;
+     padding-bottom: 5px;
  }
  
  
  h2{
    font-family: 'Montserrat', sans-serif;
-   color: black;
+   color: rgb(73, 144, 202);
+   padding: 15px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   /*https://codepen.io/lizcoultersmith/pen/VwYwyKJ for border under writing*/
+   border-bottom: 1px solid rgb(73, 144, 202);
  }
 
  h3{
-    font-family: 'Raleway', sans-serif;
-    color: black;
+  font-family: 'Montserrat', sans-serif;
+  padding: 15px;
+  text-align: left;
+ }
+
+ h4{
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
  }
 
  p{
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
  }
 
 nav { 
@@ -65,7 +78,7 @@ nav {
  
   li a {
     text-decoration: none;
-    color: rgb(243, 236, 236);
+    color: white;
     /*change of font size*/
     font: 20px/1 'Raleway', sans-serif;
     text-transform: uppercase;
@@ -109,7 +122,7 @@ nav {
     grid-row: 1;
     padding: 5em;
     /*background-color: rgb(198, 229, 241);*/
-    text-align: center;
+    text-align: left;
     padding: 10px 50px 20px;
   }
 
@@ -119,8 +132,8 @@ nav {
       padding: 10%;
      /* background-color: rgb(198, 229, 241);*/
       font-family: 'Raleway', sans-serif;
-      text-align: center;
-      padding: 10px 50px 20px;
+      text-align: left;
+      padding: 10px 40px 20px;
   }
 
   .three{
@@ -129,8 +142,8 @@ nav {
     padding: 10%;
     /*background-color: rgb(198, 229, 241);*/
     font-family: 'Raleway', sans-serif;
-    text-align: center;
-    padding: 10px 50px 20px;
+    text-align: left;
+    padding: 10px 40px 20px;
   
 }
 
@@ -184,7 +197,7 @@ nav {
 }
 
 .portfolio-item:hover {
-  /*box-shadow: 0 10px 20px rgba(0,0,0,0.8);*/
+ box-shadow: 0 5px 20px rgba(107, 154, 216, 0.5);
 }
 
 .text {
@@ -194,7 +207,143 @@ nav {
   font-family: 'Raleway', sans-serif;
 }
 
-@media (max-width: 500px) {
+
+.content2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+  grid-auto-rows: minmax(100px, auto);
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 100px;
+  
+}
+
+/*img {
+  border-style: none;
+  border-radius: 15%;
+  align-items: center;
+ }*/
+
+.contact {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 5em;
+  /*background-color: rgb(198, 229, 241);*/
+  text-align: left;
+  padding: 10px 50px 20px;
+}
+
+.education {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 10%;
+   /* background-color: rgb(198, 229, 241);*/
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    padding: 10px 50px 20px;
+}
+
+
+.experience{
+  grid-column: 2;
+  grid-row: 1;
+  padding: 10%;
+  /*background-color: rgb(198, 229, 241);*/
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  padding: 10px 50px 20px;
+
+}
+
+.skill{
+  grid-column: 3;
+  grid-row: 1;
+  padding: 10%;
+  /*background-color: rgb(198, 229, 241);*/
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  padding: 10px 50px 20px;
+
+}
+
+/* most of CSS used is taken from https://codepen.io/ssbalakumar/pen/uzDIA
+this is only used as a guide for how to style and then changes have been made to fit my portfolio*/
+.form {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	padding:25px;
+	margin:50px 0;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+  font-size:15px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 20px;
+	min-width: 100%;
+  width: 100%;
+  padding-top: 5px;
+  
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+
+#contact textarea {
+	height:90px;
+	max-width:100%;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:rgb(172, 189, 214);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:20px;
+}
+
+#contact button[type="submit"]:hover {
+	background:rgb(162, 201, 233);
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+
+footer{
+    text-align: left;
+    color: white;
+    /*https://codepen.io/cbracco/pen/zekgx* code to make the footer stay at the bottom of the page */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 25px;
+}
+
+
+
+/*@media (max-width: 500px) {
   .portfolio-item,
   body{
       max-width: 30%;
@@ -211,16 +360,8 @@ nav {
   }
 }
 
-footer{
-    text-align: left;
-    color: white;
-    background: linear-gradient(rgb(172, 189, 214), rgb(162, 201, 233));
-    padding-left: 25px;
-}
-
-
-/*@media (min-width: 900px) {
-  .content2{
+@media (min-width: 400px) {
+  .container{
       grid-template-columns: repeat(3, minmax(300px, 1fr));
   }
 
