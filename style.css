@@ -326,6 +326,10 @@ fieldset {
   /* lighter grey for the hover */
 }
 
+.twitter{
+  width: 32px;
+  height: 32px;
+}
 
 footer{
     text-align: left;
